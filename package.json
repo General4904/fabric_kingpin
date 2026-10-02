@@ -1,0 +1,14 @@
+{
+  "name": "fabric_kingpin",
+  "version": "1.0.0",
+  "description": "An application for the company \"The Fabric Kingpin\" to enable customers make purchases online",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FF Tronics Inc",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

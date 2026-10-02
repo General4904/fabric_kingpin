@@ -1,0 +1,418 @@
+/* Styles */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #241238;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+section {
+    padding: 3em 5em;
+}
+
+.silver {
+    color: #bebbb5;
+}
+
+.serif {
+    font-family: serif;
+}
+
+.gold {
+    color: #c99a3e;
+}
+
+.gray {
+    color: #423f3a;
+}
+
+.fraunces {
+    font-family: 'Fraunces', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 1.3em 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid #837e72;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    color: #bebbb5;
+    cursor: pointer;
+}
+
+header nav p:hover {
+    color: white;
+}
+
+button {
+    border-radius: 3px;
+    height: 4em;
+    cursor: pointer;
+}
+
+.golden-button {
+    width: 100%;
+    padding: 1em 1em;
+    background-color: #c99a3e;
+    color: #241238;
+    font-weight: 600;
+    border: 1px solid #c99a3e;
+}
+
+.logo-top {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9px;
+}
+
+.logo-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+}
+
+.fabric {
+    color: white;
+}
+
+.kingpin {
+    color: #c99a3e;
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: white;
+    gap: 2em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.desc {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.buttons {
+    display: flex;
+    gap: 1em;
+}
+
+.hero-button {
+    width: 30%;
+}
+
+.order-button {
+    border: 1px solid #bebbb5;
+    background-color: #241238;
+    color: #bebbb5;
+}
+
+.banner {
+    width: 50%;
+    min-height: 100%;
+    max-height: 100%;
+    background-image: url(../assets/images/fabric.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner-image {
+    width: 100%;
+    height: 700px;
+}
+
+
+.stats {
+    display: flex;
+    gap: 3em;
+    flex-wrap: wrap;
+}
+
+.delivery-time {
+    flex-basis: 100%;
+}
+
+section.isthmus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    background-color: #c99a3e;
+    height: 3em;
+    color: #241238;
+}
+
+.isthmus p {
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+section.wardrobe {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+p.collection {
+    color: #241238;
+    font-weight: 700;
+}
+
+section p.wardrobe {
+    color: #423f3a;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+
+.fabric-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em;
+}
+
+.card {
+    height: fit-content;
+    width: 25%;
+    border: 1px solid #f4ead6;
+    border-radius: 5px;
+}
+
+.image-section {
+    height: 60%;
+    background-color: #f4ead6;
+    width: 100%;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+}
+
+.card-desc-section {
+    padding: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    background-color: #f3ede1;
+}
+
+p.price {
+    color: #241238;
+    font-weight: 700;
+}
+
+section.craft {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+h2.craft {
+    color: white;
+}
+
+p.craft {
+    color: #aca697;
+}
+
+.moves-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.move-card {
+    border-top: 1px solid #c99a3e;
+    padding: 1em 0;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+
+.number {
+    color: #c99a3e;
+    font-size: xx-large;
+}
+
+.owambe {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6em;
+}
+
+.fitting-card {
+    background-color: #7b3676;
+    color: white;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+    padding: 2em;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+}
+
+.text h3 {
+    font-size: 2em;
+}
+
+button.book-fitting {
+    width: 20%;
+    color: #7b3676;
+    background-color: white;
+    border: none;
+    font-weight: 600;
+}
+
+.figure-icon {
+    width: 20%;
+}
+
+.icon {
+    width: 70%;
+    height: 20%;
+}
+
+.testimony {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+}
+
+.testimony p {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #bebbb5;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+
+.bottom-section {
+    padding-bottom: 2px;
+}
+
+.footer-section {
+    width: 35%;
+}
+
+.brand-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.join {
+    height: 3em;
+    width: 60%;
+    border-radius: 4px;
+}
+
+#email {
+    padding: 1em 7px;
+    background-color: #241238;
+    border: 1px solid #837e72;
+    color: white;
+}
+
+#email:focus {
+    outline: none;
+    border: 1px solid #837e72;
+}
+
+button.join {
+    width: 25%;
+    background-color: #c99a3e;
+    color: #241238;
+    border: none;
+}
+
+.shop,
+.atelier,
+.visit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.shop {
+    margin-left: 2em;
+}
+
+a {
+    color: #e4c578;
+    text-decoration: none;
+}
+
+.attribution {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.kingpin-attribution {
+    margin-bottom: 1em;
+}
+
+.tronics {
+    justify-content: center;
+    background-color: black;
+    color: #bebbb5;
+}
