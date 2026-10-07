@@ -41,18 +41,32 @@ section {
     font-family: 'Fraunces', sans-serif;
 }
 
-.container {
+.container-fluid {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 0;
+    margin: 0;
+    position: relative;
 }
 
 header {
-    padding: 1.3em 5em;
+    padding: 1em 5em;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1.5px solid #837e72;
+
+    background-color: #241238;
 }
+
+/* #collapseExample {
+    display: flex;
+}
+
+p.d-inline-flex.gap-1 button {
+    display: none;
+} */
 
 header nav {
     display: flex;
@@ -96,6 +110,19 @@ button {
     border-radius: 100px;
 }
 
+button.btn.btn-primary {
+    background-color: #c99a3e;
+    border: 1px solid #c99a3e;
+    color: white
+}
+
+button.btn.btn-primary:active {
+    background-color: #c99a3e;
+    border: 1px solid #c99a3e;
+}
+
+
+
 .fabric {
     color: white;
 }
@@ -129,7 +156,7 @@ h1 {
 }
 
 .hero-button {
-    width: 30%;
+    flex: 1;
 }
 
 .order-button {
@@ -303,6 +330,7 @@ p.craft {
     justify-content: center;
 }
 
+
 .text h3 {
     font-size: 2em;
 }
@@ -337,7 +365,7 @@ button.book-fitting {
 
 footer {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     border-bottom: 1px solid #bebbb5;
     padding-bottom: 2em;
@@ -358,25 +386,25 @@ footer {
     gap: 1em;
 }
 
-.join {
+.join-subscription {
     height: 3em;
     width: 60%;
     border-radius: 4px;
 }
 
-#email {
+#email-subscription {
     padding: 1em 7px;
     background-color: #241238;
     border: 1px solid #837e72;
     color: white;
 }
 
-#email:focus {
+#email-subscription:focus {
     outline: none;
     border: 1px solid #837e72;
 }
 
-button.join {
+button.join-subscription {
     width: 25%;
     background-color: #c99a3e;
     color: #241238;
@@ -415,4 +443,168 @@ a {
     justify-content: center;
     background-color: black;
     color: #bebbb5;
+}
+
+@media screen and (max-width: 1023px) {
+    body {
+        width: 100vw;
+    }
+
+    .bi.bi-three-dots-vertical {
+        display: block;
+        color: #241238;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    section.hero-section {
+        padding: 0;
+    }
+
+    .desc {
+        display: block;
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.7)), url(../assets/images/fabric.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 1em;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    section {
+        padding: 1em;
+    }
+
+    #collapseExample {
+        position: relative;
+    }
+
+    #collapseExample {
+        position: absolute;
+        background-color: black;
+        top: 6em;
+        left: 0;
+        height: 100vh;
+    }
+
+    #collapseExample nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100vw;
+    }
+
+    button.book-fitting {
+        width: 30%;
+    }
+
+    #email-subscription {
+        margin-bottom: 3px;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        width: 100vw;
+    }
+
+    header {
+        height: 6em;
+        justify-content: space-between;
+        padding: 1em;
+        gap: 5em;
+    }
+
+    .hero-button {
+        margin-bottom: 2em;
+        text-align: center;
+    }
+
+    section.isthmus {
+        display: none;
+    }
+
+    .fabric-cards {
+        flex-direction: column;
+        padding: 3px 0;
+        gap: 1em;
+    }
+
+    .fabric-cards .card {
+        width: 100%;
+    }
+
+    .moves-cards {
+        flex-direction: column;
+    }
+
+    .figure-icon {
+        display: none;
+    }
+
+    button.book-fitting {
+        width: 60%;
+    }
+
+    footer {
+        display: block;
+    }
+
+    footer .logo {
+        margin-bottom: 9px;
+    }
+
+    footer .footer-section {
+        width: 100%;
+    }
+
+    footer form {
+        display: flex;
+        gap: 1em;
+        margin-bottom: 2em;
+    }
+
+    footer form label {
+        flex: 2;
+    }
+
+    .brand-desc {
+        gap: 0;
+    }
+
+    #email-subscription {
+        width: 100%;
+    }
+
+    .join-subscription-button {
+        flex: 1;
+    }
+
+    .shop,
+    .atelier,
+    .visit {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0;
+        margin-bottom: 2em;
+    }
+
+    .shop {
+        margin-left: 0;
+    }
+
+    .attribution {
+        flex-direction: column-reverse;
+    }
 }

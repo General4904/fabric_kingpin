@@ -1,14 +1,24 @@
 {
   "name": "fabric_kingpin",
   "version": "1.0.0",
+  "type": "module",
   "description": "An application for the company \"The Fabric Kingpin\" to enable customers make purchases online",
-  "main": "index.js",
+  "main": "dist/server",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/server"
   },
   "author": "FF Tronics Inc",
   "license": "ISC",
   "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.6",
+    "@types/mongoose": "^5.11.96",
+    "dotenv": "^18.0.5",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongodb": "^7.7.0",
+    "mongoose": "^9.10.4"
   }
 }

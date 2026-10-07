@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Login | Signup</title>
+    <link rel='stylesheet' href='styles/main.css'>
+    <link rel='stylesheet' href='styles/login.css'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-nav">
+                <div class="login-nav" id="login-nav">Sign In</div>
+                <div class="sign-up-nav" id="sign-up-nav">Create Account</div>
+            </div>
+            <div class="form-container">
+
+                <!-- Log in form -->
+                <form action="#" class="login-form" id="login-form" method="post">
+                    <div class="text-input">
+                        <label for="login-email">Email</label>
+                        <input type="email" class="login-email login-text-field text-field" name="email"
+                            id="login-email">
+                    </div>
+                    <div class="text-input">
+                        <label for="login-password">Password</label>
+                        <input type="password" class="login-password login-text-field text-field" name="password"
+                            id="login-password">
+                    </div>
+
+                    <div class="form-bottom">
+                        <p>
+                            <input type="checkbox" class="remember" name="remember" id="remember"><label for="remember"
+                                class="remember">Remember
+                                me</label>
+                        </p>
+                        <p class="forgot">Forgot password?</p>
+                    </div>
+
+                    <div class="submit-section">
+                        <input class="login-button" id="login-button" type="submit" value="Sign In" disabled>
+                    </div>
+
+                    <div class="new">
+                        <p>New here? <span class="create">Create an account</span></p>
+                    </div>
+                </form>
+                <!-- Sign up form -->
+                <form action="/api/user" class="sign-up-form" id="sign-up-form" method="get">
+                    <div class="fullname-inputs">
+                        <div class="text-input">
+                            <label for="sign-up-firstname">First name</label>
+                            <input type="text" class="sign-up-firstname sign-up-text-field text-field" name="firstname"
+                                id="sign-up-firstname">
+                        </div>
+                        <div class="text-input">
+                            <label for="sign-up-lastname">Last name</label>
+                            <input type="text" class="sign-up-lastname sign-up-text-field text-field" name="lastname"
+                                id="sign-up-lastname">
+                        </div>
+                        <div class="text-input">
+                            <label for="sign-up-middlename">Middle name</label>
+                            <input type="text" class="sign-up-middlename sign-up-text-field text-field"
+                                name="middlename" id="sign-up-middlename">
+                        </div>
+                    </div>
+                    <div class="text-input">
+                        <label for="sign-up-email">Email</label>
+                        <input type="email" class="sign-up-email sign-up-text-field text-field" name="email"
+                            id="sign-up-email">
+                    </div>
+
+                    <div class="text-input">
+                        <label for="sign-up-phone-number">Phone number</label>
+                        <input type="tel" class="sign-up-phone-number sign-up-text-field text-field" name="phone-number"
+                            id="sign-up-phone-number">
+                    </div>
+                    <div class="text-input">
+                        <label for="sign-up-password">Password</label>
+                        <input type="password" class="sign-up-password sign-up-text-field text-field" name="password"
+                            id="sign-up-password">
+                    </div>
+
+                    <div class="submit-section">
+                        <input class="login-button" id="sign-up-button" type="submit" value="Create Account" disabled>
+                    </div>
+
+                    <div class="new">
+                        <p>Already have an account? <span class="create sign">Sign in</span></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
