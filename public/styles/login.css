@@ -4,7 +4,7 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,7 +27,7 @@ body {
 
 .card {
     width: 50%;
-    height: fit-content;
+    /* height: fit-content; */
     padding: 2em;
     border-radius: 10px;
     background-color: #FAF5EA;
@@ -198,4 +198,43 @@ form.sign-up-form {
     align-items: center;
     justify-content: space-between;
     gap: 1em;
+}
+
+@media screen and (max-width: 1023px) {
+    .card {
+        width: fit-content;
+    }
+
+    .card-nav {
+        padding: 3px;
+        flex-direction: column;
+        height: 4em;
+    }
+
+    .login-nav,
+    .sign-up-nav {
+        width: 100%;
+    }
+
+    .form-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .card {
+        width: 92vw;
+        height: max-content;
+    }
+
+    .fullname-inputs {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .text-input {
+        width: 100%;
+    }
 }

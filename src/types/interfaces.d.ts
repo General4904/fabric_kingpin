@@ -1,35 +1,31 @@
-export type Role =
-  | "Customer"
-  | "SalesPerson"
-  | "Manager"
-  | "Kingpin"
-  | "Engineer";
+export type CustomerRole = "Customer";
+export type StaffRole = "SalesPerson" | "Manager" | "Kingpin" | "Engineer";
 
-export interface Customer {
+export interface ICustomer {
   firstname: string;
   lastname: string;
   middlename?: string;
   email: string;
   password: string;
-  dateOfBirth: Date;
-  role: Role;
-  Cart: Array<string>;
+  phoneNumber: string;
+  // dateOfBirth: Date;
+  role: CustomerRole;
   readonly dateCreated: Date;
   address: string;
 }
 
-export interface Staff {
+export interface IStaff {
   firstname: string;
   lastname: string;
   middlename?: string;
   email: string;
   password: string;
   dateOfBirth: Date;
-  role: Role;
+  role: StaffRole;
   address: string;
 }
 
-export interface Fabric {
+export interface IFabric {
   fabricName: string;
   quantityAvailable: string;
   price: number;

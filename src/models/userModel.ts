@@ -1,7 +1,7 @@
-import { model, Schema, connect } from "mongoose";
-import type { Staff, Customer } from "../types/interfaces.js";
+import { model, Schema } from "mongoose";
+import type { IStaff, ICustomer } from "../types/interfaces.js";
 
-const StaffSchema = new Schema<Staff>({
+const StaffSchema = new Schema<IStaff>({
   firstname: {
     type: String,
     required: true,
@@ -13,7 +13,7 @@ const StaffSchema = new Schema<Staff>({
 
   middlename: {
     type: String,
-    required: true,
+    required: false,
   },
   email: {
     type: String,
@@ -38,7 +38,7 @@ const StaffSchema = new Schema<Staff>({
   },
 });
 
-const CustomerSchema = new Schema<Customer>({
+const CustomerSchema = new Schema<ICustomer>({
   firstname: {
     type: String,
     required: true,
@@ -55,14 +55,18 @@ const CustomerSchema = new Schema<Customer>({
     type: String,
     required: true,
   },
+  phoneNumber: {
+    type: String,
+    required: true,
+  },
   password: {
     type: String,
     required: true,
   },
-  dateOfBirth: {
-    type: Date,
-    required: true,
-  },
+  // dateOfBirth: {
+  //   type: Date,
+  //   required: true,
+  // },
   role: {
     type: String,
     enum: ["Customer"],
@@ -75,5 +79,5 @@ const CustomerSchema = new Schema<Customer>({
   },
 });
 
-export const CustomerModel = model<Customer>("Customer", CustomerSchema);
-export const StaffModel = model<Staff>("Staff", StaffSchema);
+export const Customer = model<ICustomer>("Customer", CustomerSchema);
+export const Staff = model<IStaff>("Staff", StaffSchema);

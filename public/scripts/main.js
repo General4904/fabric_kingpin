@@ -1,11 +1,6 @@
 // Scripts
 console.log(`Hello world`);
 
-// const collapseElementList = document.querySelectorAll(".collapse");
-// const collapseList = [...collapseElementList].map(
-//   (collapseEl) => new bootstrap.Collapse(collapseEl),
-// );
-
 // Login form elements
 const loginNav = document.getElementById("login-nav");
 const loginForm = document.getElementById("login-form");
@@ -88,7 +83,7 @@ for (let i = 0; i < signUpTextFields.length; i++) {
   });
 }
 
-signUpForm.addEventListener("submit", (e) => {
+signUpForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   let valid = true;
   for (let i = 0; i < signUpTextFields.length; i++) {
@@ -101,6 +96,32 @@ signUpForm.addEventListener("submit", (e) => {
   }
 
   if (valid) {
-    signUpForm.submit();
+    // 2. Automatically capture all name/value pairs from the form
+    const formData = new FormData(signUpForm);
+    const formProps = Object.fromEntries(formData);
+    const firstname = formData.get("firstname");
+    const email = formData.get("email");
+
+    const userProfile = { firstname, email };
+
+    try {
+      const response = await fetch("/api/newCustomer", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(formProps),
+      });
+
+      if (!response.ok) {
+        throw new Error(response.status);
+      }
+      localStorage.setItem("userProfile", JSON.stringify(userProfile));
+      window.location.href = "/registrationSuccessful";
+      const result = await response.json();
+      console.log(`'Success': ${result}`);
+    } catch (error) {
+      console.error(error);
+    }
   }
 });

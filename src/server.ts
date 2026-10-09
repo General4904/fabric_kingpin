@@ -1,13 +1,13 @@
 import "dotenv/config";
 import express from "express";
-import { MongoClient, ServerApiVersion } from "mongodb";
 import customer from "./routes/Customer.js";
+import { connectToDB } from "./config/db_config.js";
 
 const app = express();
-const URI = process.env.URI;
-const PORT = process.env.PORT;
 
 app.use(express.static("public", { extensions: ["html"] }));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.use("/api", customer);
 
@@ -15,28 +15,9 @@ app.get("/", (req, res) => {
   res.send("Hello world");
 });
 
-if (!URI) {
-  throw Error;
-}
+const PORT = process.env.PORT;
 
-const client = new MongoClient(URI, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  },
-});
-
-async function connectToDB() {
-  try {
-    await client.connect();
-    console.log(`Successfully connected to DB`);
-  } catch {
-    console.error(`Error`);
-  }
-}
-
-connectToDB();
+await connectToDB();
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
