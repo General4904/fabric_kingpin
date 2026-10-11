@@ -452,9 +452,17 @@ a {
 }
 
 .tronics {
+    display: flex;
+    padding: 3px 0;
     justify-content: center;
+    align-items: center;
     background-color: black;
     color: #bebbb5;
+}
+
+.tronics p {
+    margin-bottom: 0;
+    font-size: 12px;
 }
 
 @media screen and (max-width: 1023px) {

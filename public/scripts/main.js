@@ -100,9 +100,12 @@ signUpForm.addEventListener("submit", async (e) => {
     const formData = new FormData(signUpForm);
     const formProps = Object.fromEntries(formData);
     const firstname = formData.get("firstname");
+    const lastname = formData.get("lastname");
+    const middlename = formData.get("middlename");
+    const phoneNumber = formData.get("phoneNumber");
     const email = formData.get("email");
 
-    const userProfile = { firstname, email };
+    const userProfile = { firstname, lastname, email, middlename, phoneNumber };
 
     try {
       const response = await fetch("/api/newCustomer", {
